@@ -1,0 +1,4 @@
+--cpu Cortex-M3 "startup_stm32f10x_md.o" "delay.o" "init.o" "main.o" "usart.o" --strict --scatter "FrameV2.sct" 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\FrameV2.map" -o "FrameV2.axf"

@@ -1,0 +1,127 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\Dennis\Downloads\stm32_chanfat_mthomas_20100704b (1)\project\stm32_chanfat.uvproj
+Project File Date:  07/04/2010
+
+<h2>Output:</h2>
+Build target 'STM32 Flash'
+compiling startup_stm32f10x_md_mthomas.c...
+startup_stm32f10x_md_mthomas.c(72): warning:  #1207-D: attribute "__interrupt__" ignored
+  void Reset_Handler(void) __attribute__((__interrupt__));
+startup_stm32f10x_md_mthomas.c(177): warning:  #1296-D: extended constant initialiser used
+      (intfunc)((unsigned long)&_estack), /* The stack pointer after relocation */
+startup_stm32f10x_md_mthomas.c: 2 warnings, 0 errors
+compiling main.c...
+main.c(16): error:  #5: cannot open source input file "stm32f10x.h": No such file or directory
+  #include "stm32f10x.h"
+main.c: 0 warnings, 1 error
+compiling rtc.c...
+rtc.c(9): error:  #5: cannot open source input file "stm32f10x.h": No such file or directory
+  #include "stm32f10x.h"
+rtc.c: 0 warnings, 1 error
+compiling comm.c...
+comm.c(2): error:  #5: cannot open source input file "stm32f10x.h": No such file or directory
+  #include "stm32f10x.h"
+comm.c: 0 warnings, 1 error
+compiling term_io.c...
+term_io.h(4): error:  #5: cannot open source input file "integer.h": No such file or directory
+  #include "integer.h"
+term_io.c: 0 warnings, 1 error
+compiling ff_test_term.c...
+ff_test_term.c(7): error:  #5: cannot open source input file "integer.h": No such file or directory
+  #include "integer.h"
+ff_test_term.c: 0 warnings, 1 error
+compiling misc_test_term.c...
+stm32f10x_conf.h(28): error:  #5: cannot open source input file "stm32f10x_bkp.h": No such file or directory
+  #include "stm32f10x_bkp.h"
+misc_test_term.c: 0 warnings, 1 error
+compiling syscalls.c...
+syscalls.c(10): error:  #5: cannot open source input file "reent.h": No such file or directory
+  #include <reent.h>
+syscalls.c: 0 warnings, 1 error
+compiling sd_spi_stm32.c...
+Libraries/fat_sd/sd_spi_stm32.c(35): error:  #5: cannot open source input file "stm32f10x.h": No such file or directory
+  #include "stm32f10x.h"
+Libraries/fat_sd/sd_spi_stm32.c: 0 warnings, 1 error
+compiling fattime.c...
+Libraries/fat_sd/integer.h(11): error:  #5: cannot open source input file "stm32f10x.h": No such file or directory
+  #include "stm32f10x.h"
+Libraries/fat_sd/fattime.c: 0 warnings, 1 error
+compiling ff.c...
+Libraries/fat_sd/integer.h(11): error:  #5: cannot open source input file "stm32f10x.h": No such file or directory
+  #include "stm32f10x.h"
+Libraries/fat_sd/ff.c: 0 warnings, 1 error
+compiling minIni.c...
+Libraries/minIni/minGlue.h(28): error:  #5: cannot open source input file "ff.h": No such file or directory
+  #include "ff.h"                   /* include tff.h for Tiny-FatFs */
+Libraries/minIni/minIni.c: 0 warnings, 1 error
+compiling ccsbcs.c...
+Libraries/fat_sd/option/../integer.h(11): error:  #5: cannot open source input file "stm32f10x.h": No such file or directory
+  #include "stm32f10x.h"
+Libraries/fat_sd/option/ccsbcs.c: 0 warnings, 1 error
+compiling eeprom.c...
+Libraries/EEPROMEmulation_AN/source/eeprom.c(25): error:  #5: cannot open source input file "eeprom.h": No such file or directory
+  #include "eeprom.h"
+Libraries/EEPROMEmulation_AN/source/eeprom.c: 0 warnings, 1 error
+compiling dcc_stdio.c...
+dcc_stdio.c(99): error:  #35: #error directive: unsupported target
+   #error unsupported target
+dcc_stdio.c: 0 warnings, 1 error
+compiling misc.c...
+Libraries/STM32F10x_StdPeriph_Driver/src/misc.c(23): error:  #5: cannot open source input file "misc.h": No such file or directory
+  #include "misc.h"
+Libraries/STM32F10x_StdPeriph_Driver/src/misc.c: 0 warnings, 1 error
+compiling stm32f10x_bkp.c...
+Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_bkp.c(22): error:  #5: cannot open source input file "stm32f10x_bkp.h": No such file or directory
+  #include "stm32f10x_bkp.h"
+Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_bkp.c: 0 warnings, 1 error
+compiling stm32f10x_dma.c...
+Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dma.c(22): error:  #5: cannot open source input file "stm32f10x_dma.h": No such file or directory
+  #include "stm32f10x_dma.h"
+Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dma.c: 0 warnings, 1 error
+compiling stm32f10x_flash.c...
+Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.c(22): error:  #5: cannot open source input file "stm32f10x_flash.h": No such file or directory
+  #include "stm32f10x_flash.h"
+Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.c: 0 warnings, 1 error
+compiling stm32f10x_gpio.c...
+Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c(22): error:  #5: cannot open source input file "stm32f10x_gpio.h": No such file or directory
+  #include "stm32f10x_gpio.h"
+Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c: 0 warnings, 1 error
+compiling stm32f10x_pwr.c...
+Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_pwr.c(22): error:  #5: cannot open source input file "stm32f10x_pwr.h": No such file or directory
+  #include "stm32f10x_pwr.h"
+Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_pwr.c: 0 warnings, 1 error
+compiling stm32f10x_rcc.c...
+Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.c(22): error:  #5: cannot open source input file "stm32f10x_rcc.h": No such file or directory
+  #include "stm32f10x_rcc.h"
+Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.c: 0 warnings, 1 error
+compiling stm32f10x_rtc.c...
+Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rtc.c(22): error:  #5: cannot open source input file "stm32f10x_rtc.h": No such file or directory
+  #include "stm32f10x_rtc.h"
+Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rtc.c: 0 warnings, 1 error
+compiling stm32f10x_spi.c...
+Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c(22): error:  #5: cannot open source input file "stm32f10x_spi.h": No such file or directory
+  #include "stm32f10x_spi.h"
+Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c: 0 warnings, 1 error
+compiling stm32f10x_usart.c...
+Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c(22): error:  #5: cannot open source input file "stm32f10x_usart.h": No such file or directory
+  #include "stm32f10x_usart.h"
+Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c: 0 warnings, 1 error
+compiling stm32f10x_tim.c...
+Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.c(22): error:  #5: cannot open source input file "stm32f10x_tim.h": No such file or directory
+  #include "stm32f10x_tim.h"
+Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.c: 0 warnings, 1 error
+compiling stm32f10x_wwdg.c...
+Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_wwdg.c(22): error:  #5: cannot open source input file "stm32f10x_wwdg.h": No such file or directory
+  #include "stm32f10x_wwdg.h"
+Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_wwdg.c: 0 warnings, 1 error
+compiling core_cm3.c...
+compiling system_stm32f10x.c...
+".\stm32_chanfat.axf" - 26 Error(s), 2 Warning(s).
+Target not created
+</pre>
+</body>
+</html>

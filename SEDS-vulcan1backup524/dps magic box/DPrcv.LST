@@ -1,0 +1,119 @@
+C51 COMPILER V9.53.0.0   DPRCV                                                             04/09/2015 02:00:14 PAGE 1   
+
+
+C51 COMPILER V9.53.0.0, COMPILATION OF MODULE DPRCV
+OBJECT MODULE PLACED IN DPrcv.OBJ
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE DPrcv.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          #include <reg60s2.h>
+   2          #include <intrins.h>
+   3          
+   4          typedef unsigned char BYTE;
+   5          typedef unsigned int WORD;
+   6          
+   7          #define FOSC 18432000L      //System frequency
+   8          #define BAUD 9600           //UART baudrate
+   9          unsigned int RCV,pass,goahead;
+  10          sbit ot1 = P0^0;
+  11          sbit ot2 = P0^1;
+  12          sbit ot3 = P0^2;
+  13          sbit ot4 = P0^3;
+  14          sbit ot5 = P0^4;
+  15          sbit ot6 = P0^5;
+  16          sbit ot7 = P0^6;
+  17          sbit ot8 = P0^7;
+  18          
+  19          
+  20          sbit r1 = P2^0;
+  21          sbit r2 = P2^1;
+  22          sbit r3 = P2^2;
+  23          sbit r4 = P2^3;
+  24          sbit r5 = P2^4;
+  25          sbit r6 = P2^5;
+  26          sbit r7 = P2^6;
+  27          sbit r8 = P2^7;
+  28          sbit IND=P3^4;
+  29          
+  30          
+  31          void delay_ms(int m)    //@24.000MHz
+  32          {
+  33   1        unsigned char i, j;
+  34   1      
+  35   1        i = 24*m;
+  36   1        j = 85;
+  37   1        do
+  38   1        {
+  39   2          while (--j);
+  40   2        } while (--i);
+  41   1      }
+  42          
+  43          void main()
+  44          {
+  45   1        unsigned int Sav=0;
+  46   1        P0M0=0x80;
+  47   1        P0M1=0x00;
+  48   1        PCON &= 0x7F;   //??????
+  49   1        SCON = 0x50;    //8???,?????
+  50   1        AUXR &= 0xFB;   //???????????Fosc/12,?12T
+  51   1        BRT = 0xFD;   //?????????????
+  52   1        AUXR |= 0x01;   //??1?????????????????
+  53   1        AUXR |= 0x10;   //??????????
+  54   1        ES = 1;                 //Enable UART interrupt
+  55   1        EA = 1;                    //Open master interrupt switch
+C51 COMPILER V9.53.0.0   DPRCV                                                             04/09/2015 02:00:14 PAGE 2   
+
+  56   1        while(1)
+  57   1        {
+  58   2          while(!goahead);
+  59   2          goahead=0;
+  60   2          if(SBUF==0xa5)
+  61   2            pass=0;
+  62   2          else
+  63   2            pass=1;
+  64   2          while(!goahead&!pass);
+  65   2           goahead=0;
+  66   2          if(!pass)
+  67   2            RCV=SBUF;
+  68   2          while(!goahead&!pass);
+  69   2          goahead=0;
+  70   2          if(SBUF==0x5a)
+  71   2            P0=RCV;   
+  72   2          pass=0;
+  73   2        }
+  74   1      }
+  75          
+  76          /*----------------------------
+  77          UART interrupt service routine
+  78          ----------------------------*/
+  79          void Uart_Isr() interrupt 4 using 1
+  80          {
+  81   1        IND=!IND;
+  82   1          if (RI)
+  83   1          {
+  84   2              RI = 0;             //Clear receive interrupt flag
+  85   2              goahead=1;
+  86   2          }
+  87   1          TI=0;
+  88   1      }
+  89          
+  90          
+  91          
+  92          
+  93          
+  94          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    183    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      6       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,1 @@
+.\comm.o: comm.c

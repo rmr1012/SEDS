@@ -1,0 +1,112 @@
+C51 COMPILER V9.53.0.0   DPTRANS                                                           04/09/2015 02:08:53 PAGE 1   
+
+
+C51 COMPILER V9.53.0.0, COMPILATION OF MODULE DPTRANS
+OBJECT MODULE PLACED IN DPtrans.OBJ
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE DPtrans.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          #include <reg60s2.h>
+   2          #include <intrins.h>
+   3          
+   4          typedef unsigned char BYTE;
+   5          typedef unsigned int WORD;
+   6          
+   7          #define FOSC 18432000L      //System frequency
+   8          #define BAUD 9600           //UART baudrate
+   9          #define T1MS (65536-FOSC/12/25)
+  10                     //wakeup and clock output control register
+  11          sbit T0CLKO   = P3^4;               //timer0 clock output pin
+  12          sbit sw1 = P0^0;
+  13          sbit sw2 = P0^1;
+  14          sbit sw3 = P0^2;
+  15          sbit sw4 = P0^3;
+  16          sbit sw5 = P0^4;
+  17          sbit sw6 = P0^5;
+  18          sbit sw7 = P0^6;
+  19          sbit sw8 = P0^7;
+  20          sbit IND=P3^4;
+  21          
+  22          void delay_ms(int m)    //@24.000MHz
+  23          {
+  24   1        unsigned char i, j;
+  25   1      
+  26   1        i = 24*m;
+  27   1        j = 85;
+  28   1        do
+  29   1        {
+  30   2          while (--j);
+  31   2        } while (--i);
+  32   1      }
+  33          
+  34          void main()
+  35          {
+  36   1        unsigned int Sav=0;
+  37   1        PCON &= 0x7F;   //??????
+  38   1        SCON = 0x50;    //8???,?????
+  39   1        AUXR &= 0xFB;   //???????????Fosc/12,?12T
+  40   1        BRT = 0xFD;   //?????????????
+  41   1        AUXR |= 0x01;   //??1?????????????????
+  42   1        AUXR |= 0x10;   //??????????
+  43   1        ES = 1;                 //Enable UART interrupt
+  44   1        EA = 1;                 //Open master interrupt switch
+  45   1      //  T1M0=0xff;//push pull
+  46   1        //T1M1=0x00;
+  47   1      //  AUXR = 0x80; 
+  48   1        //timer0 work in 1T mode
+  49   1          TMOD = 0x01;                    //set timer0 as mode1 (16-bit)
+  50   1          TL0 = T1MS;                     //initial timer0 low byte
+  51   1          TH0 = T1MS >> 8;                //initial timer0 high byte
+  52   1          TR0 = 1;                        //timer0 start running
+  53   1          ET0 = 1;                        //enable timer0 interrupt
+  54   1          EA = 1;                         //timer0 start running
+  55   1        while(1)
+C51 COMPILER V9.53.0.0   DPTRANS                                                           04/09/2015 02:08:53 PAGE 2   
+
+  56   1        {
+  57   2          P1=P0;
+  58   2        }
+  59   1      }
+  60          
+  61          /*----------------------------
+  62          UART interrupt service routine
+  63          ----------------------------*/
+  64          void Uart_Isr() interrupt 4 using 1
+  65          {
+  66   1        IND=!IND;
+  67   1          if (TI)
+  68   1          {
+  69   2              TI = 0;             //Clear transmit interrupt flag
+  70   2          }
+  71   1      }
+  72          
+  73          void tm0_isr() interrupt 1 using 1
+  74          {
+  75   1          TL0 = T1MS;                     //reload timer0 low byte
+  76   1          TH0 = T1MS >> 8;               //reload timer0 high byte
+  77   1          IND=!IND;
+  78   1          SBUF=0xa5;
+  79   1          delay_ms(1);
+  80   1          SBUF=(0x01*sw4)|(0x02*sw6)|(0x04*sw3)|(0x08*sw5)|(0x10*sw1)|(0x20*sw8)|(0x40*sw2)|(0x80*sw7);
+  81   1          delay_ms(1); 
+  82   1          SBUF=0x5a;
+  83   1      }
+  84          
+  85          
+  86          
+  87          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    184    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

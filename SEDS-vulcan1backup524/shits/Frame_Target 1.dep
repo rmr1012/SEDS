@@ -1,0 +1,10 @@
+Dependencies for Project 'Frame', Target 'Target 1': (DO NOT MODIFY !)
+F (.\startup_stm32f10x_md.s)(0x54C369CA)(--device DARMSTM --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil_v5\ARM\ARMCC\include-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\Inc\ST\STM32F10x--list .\startup_stm32f10x_md.lst --xref -o .\startup_stm32f10x_md.o --depend .\startup_stm32f10x_md.d)
+F (.\delay.c)(0x549D0788)(-c --device DARMSTM -D__EVAL -g -O0 --apcs=interwork -I C:\Keil_v5\ARM\ARMCC\include-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\Inc\ST\STM32F10x-o .\delay.o --depend .\delay.d)
+F (.\main.c)(0x54C698D7)(-c --device DARMSTM -D__EVAL -g -O0 --apcs=interwork -I C:\Keil_v5\ARM\ARMCC\include-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\Inc\ST\STM32F10x-o .\main.o --depend .\main.d)
+F (.\usart.c)(0x549D0646)(-c --device DARMSTM -D__EVAL -g -O0 --apcs=interwork -I C:\Keil_v5\ARM\ARMCC\include-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\Inc\ST\STM32F10x-o .\usart.o --depend .\usart.d)
+I (sys.h)(0x549D0824)
+F (.\sys.c)(0x54C42D25)(-c --device DARMSTM -D__EVAL -g -O0 --apcs=interwork -I C:\Keil_v5\ARM\ARMCC\include-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\Inc\ST\STM32F10x-o .\sys.o --depend .\sys.d)
+F (.\init.c)(0x54C698D9)(-c --device DARMSTM -D__EVAL -g -O0 --apcs=interwork -I C:\Keil_v5\ARM\ARMCC\include-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\Inc\ST\STM32F10x-o .\init.o --depend .\init.d)
+I (init.h)(0x54C698D4)
+I (sys.h)(0x549D0824)

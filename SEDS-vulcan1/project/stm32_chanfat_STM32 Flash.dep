@@ -1,0 +1,62 @@
+Dependencies for Project 'stm32_chanfat', Target 'STM32 Flash': (DO NOT MODIFY !)
+F (.\startup_stm32f10x_md_mthomas.c)(0x4C30E782)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\?ST\STM32F10x-o .\startup_stm32f10x_md_mthomas.o --depend .\startup_stm32f10x_md_mthomas.d)
+F (.\main.c)(0x4C310798)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\?ST\STM32F10x-o .\main.o --depend .\main.d)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C89844)
+F (.\rtc.c)(0x4B486536)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\?ST\STM32F10x-o .\rtc.o --depend .\rtc.d)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C89844)
+I (C:\Keil\ARM\ARMCC\include\stdbool.h)(0x51C89844)
+F (.\comm.c)(0x4BA6F18C)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\?ST\STM32F10x-o .\comm.o --depend .\comm.d)
+F (.\term_io.c)(0x4AA02790)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\?ST\STM32F10x-o .\term_io.o --depend .\term_io.d)
+I (C:\Keil\ARM\ARMCC\include\stdarg.h)(0x51C89844)
+I (term_io.h)(0x4A997338)
+F (.\ff_test_term.c)(0x4A997354)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\?ST\STM32F10x-o .\ff_test_term.o --depend .\ff_test_term.d)
+I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C89844)
+F (.\misc_test_term.c)(0x4B4F08CE)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\?ST\STM32F10x-o .\misc_test_term.o --depend .\misc_test_term.d)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C89844)
+I (C:\Keil\ARM\ARMCC\include\stdbool.h)(0x51C89844)
+I (C:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C89844)
+I (stm32f10x_conf.h)(0x4B147E74)
+F (.\syscalls.c)(0x4B493BCA)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\?ST\STM32F10x-o .\syscalls.o --depend .\syscalls.d)
+F (.\platform_config.h)(0x4C30E0B8)()
+F (.\stm32f10x_conf.h)(0x4B147E74)()
+F (.\Libraries/fat_sd/sd_spi_stm32.c)(0x4C30F060)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\?ST\STM32F10x-o .\sd_spi_stm32.o --depend .\sd_spi_stm32.d)
+F (.\Libraries/fat_sd/fattime.c)(0x49EB9178)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\?ST\STM32F10x-o .\fattime.o --depend .\fattime.d)
+I (Libraries/fat_sd/integer.h)(0x4A67F3A0)
+F (.\Libraries/fat_sd/ff.c)(0x4BA47176)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\?ST\STM32F10x-o .\ff.o --depend .\ff.d)
+I (Libraries/fat_sd/ff.h)(0x4AF53352)
+I (Libraries/fat_sd/integer.h)(0x4A67F3A0)
+F (.\Libraries/minIni/minIni.c)(0x4B4EF8F2)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\?ST\STM32F10x-o .\minini.o --depend .\minini.d)
+I (Libraries/minIni/minIni.h)(0x4BE1F5F0)
+I (Libraries/minIni/minGlue.h)(0x4BE1F6C0)
+F (.\Libraries/fat_sd/option/ccsbcs.c)(0x4A348082)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\?ST\STM32F10x-o .\ccsbcs.o --depend .\ccsbcs.d)
+I (Libraries/fat_sd/option/../ff.h)(0x4AF53352)
+I (Libraries/fat_sd/option/../integer.h)(0x4A67F3A0)
+F (.\Libraries/EEPROMEmulation_AN/source/eeprom.c)(0x4B4F0370)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\?ST\STM32F10x-o .\eeprom.o --depend .\eeprom.d)
+F (.\dcc_stdio.c)(0x4C30EAB8)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\?ST\STM32F10x-o .\dcc_stdio.o --depend .\dcc_stdio.d)
+I (dcc_stdio.h)(0x4910F97A)
+F (.\Libraries/STM32F10x_StdPeriph_Driver/src/misc.c)(0x4BD1DB5C)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\?ST\STM32F10x-o .\misc.o --depend .\misc.d)
+F (.\Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_bkp.c)(0x4BD1DB5C)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\?ST\STM32F10x-o .\stm32f10x_bkp.o --depend .\stm32f10x_bkp.d)
+F (.\Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dma.c)(0x4BD1DB5C)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\?ST\STM32F10x-o .\stm32f10x_dma.o --depend .\stm32f10x_dma.d)
+F (.\Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_flash.c)(0x4BD1DB5C)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\?ST\STM32F10x-o .\stm32f10x_flash.o --depend .\stm32f10x_flash.d)
+F (.\Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c)(0x4BD1DB5C)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\?ST\STM32F10x-o .\stm32f10x_gpio.o --depend .\stm32f10x_gpio.d)
+F (.\Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_pwr.c)(0x4BD1DB5C)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\?ST\STM32F10x-o .\stm32f10x_pwr.o --depend .\stm32f10x_pwr.d)
+F (.\Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.c)(0x4BD1DB5C)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\?ST\STM32F10x-o .\stm32f10x_rcc.o --depend .\stm32f10x_rcc.d)
+F (.\Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rtc.c)(0x4BD1DB5C)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\?ST\STM32F10x-o .\stm32f10x_rtc.o --depend .\stm32f10x_rtc.d)
+F (.\Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c)(0x4BD1DB5C)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\?ST\STM32F10x-o .\stm32f10x_spi.o --depend .\stm32f10x_spi.d)
+F (.\Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c)(0x4BD1DB5C)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\?ST\STM32F10x-o .\stm32f10x_usart.o --depend .\stm32f10x_usart.d)
+F (.\Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.c)(0x4BD1DB5C)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\?ST\STM32F10x-o .\stm32f10x_tim.o --depend .\stm32f10x_tim.d)
+F (.\Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_wwdg.c)(0x4BD1DB5C)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\?ST\STM32F10x-o .\stm32f10x_wwdg.o --depend .\stm32f10x_wwdg.d)
+F (.\Libraries/CMSIS/CM3/CoreSupport/core_cm3.c)(0x4BD1DB84)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\?ST\STM32F10x-o .\core_cm3.o --depend .\core_cm3.d)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C89844)
+F (.\Libraries/CMSIS/CM3/DeviceSupport/ST/STM32F10x/system_stm32f10x.c)(0x4BD1DB86)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\?ST\STM32F10x-o .\system_stm32f10x.o --depend .\system_stm32f10x.d)
+I (Libraries/CMSIS/CM3/DeviceSupport/ST/STM32F10x/stm32f10x.h)(0x4BE1E366)
+I (C:\Keil\ARM\CMSIS\Include\core_cm3.h)(0x532CCAB2)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C89844)
+I (C:\Keil\ARM\CMSIS\Include\core_cmInstr.h)(0x532CCAB2)
+I (C:\Keil\ARM\CMSIS\Include\core_cmFunc.h)(0x532CCAB2)
+I (Libraries/CMSIS/CM3/DeviceSupport/ST/STM32F10x/system_stm32f10x.h)(0x4BD1DB86)
+F (.\readme.txt)(0x4C3108AC)()
+F (.\Makefile)(0x4C30E948)()
+F (.\obj\stm32_chanfat.lss)(0x00000000)()
+F (.\lst\stm32_chanfat.map)(0x00000000)()
+F (.\STM32F10x_128k_20k_flash.ld)(0x4B1B165A)()
