@@ -7,26 +7,14 @@
 // THIS IS A COMMENT
 /* THIS IS A COMMENT TOO*/
 
+
+
+
 //Header files
 
 #include <stdio.h>  //Std io
 #incldue <time.h>   //For clock()
-
-//Assign registers names
-TODO
-
-
-//Helper methods
-
-void actuate(boolean valve) {
-    valve = !(valve);
-}
-
-//main()
-
-int main() {
-    clock_t start_t, end_t; //Declare clock variables
-    
+ r  
     //Add actuations to be done manually
     //Get input command
     //Actuation based on input
